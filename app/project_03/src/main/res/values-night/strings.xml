@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="article_subheading">Article Subheading</string>
+    <string name="HelloWord">Hello World!</string>
+    <string name="article_title">Article Title</string>
+    <string name="article_text">Article Text</string>
+</resources>

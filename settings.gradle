@@ -14,3 +14,15 @@ dependencyResolutionManagement {
 }
 rootProject.name = "classWork"
 include ':app'
+include ':app:project_01'
+include ':app:project_02'
+include ':app:project_03'
+include ':app:project_04'
+include ':app:project_05'
+include ':app:project_06'
+include ':app:project_07'
+include ':app:project_08'
+include ':app:project_09'
+include ':app:project_10'
+include ':app:project_11'
+include ':app:project_12'
