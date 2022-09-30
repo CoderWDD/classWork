@@ -2,6 +2,7 @@ package com.example.project_04
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 
 class MessageActivity : AppCompatActivity() {

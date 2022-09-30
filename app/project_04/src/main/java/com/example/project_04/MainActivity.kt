@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var etMessage = findViewById<EditText>(R.id.message)
-        var btnSendMessage = findViewById<Button>(R.id.send_message)
+        val etMessage = findViewById<EditText>(R.id.message)
+        val btnSendMessage = findViewById<Button>(R.id.send_message)
         btnSendMessage.setOnClickListener {
             val message = etMessage.text
-            Toast.makeText(this,etMessage.text,Toast.LENGTH_SHORT).show()
-            var intent = Intent(this,MessageActivity::class.java)
-            intent.putExtra("MESSAGE", message);
+            Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,MessageActivity::class.java)
+            intent.putExtra("MESSAGE", message.toString())
             startActivity(intent)
         }
     }

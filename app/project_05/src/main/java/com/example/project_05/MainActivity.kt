@@ -14,16 +14,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        var btnShowToast = findViewById<Button>(R.id.btnShowToast)
+        val btnShowToast = findViewById<Button>(R.id.btnShowToast)
         btnShowToast.setOnClickListener {
             Toast.makeText(this,"Hello world", Toast.LENGTH_SHORT).show()
         }
-
-
-        var btnCount = findViewById<Button>(R.id.btnCount)
-
-        txCount = findViewById<TextView>(R.id.tvCount)
-
+        val btnCount = findViewById<Button>(R.id.btnCount)
+        txCount = findViewById(R.id.tvCount)
         btnCount.setOnClickListener {
             count++
             txCount.text = count.toString()
@@ -32,17 +28,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putInt("count_value",count)
-        Log.i("myTag", "onSaveInstanceState: " + count.toString())
-
         super.onSaveInstanceState(outState)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-
         count = savedInstanceState.getInt("count_value")
-        Log.i("myTag", "onRestoreInstanceState: " + count.toString())
-        if (txCount != null)
-            txCount.text = count.toString()
+        txCount.text = count.toString()
     }
 }

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val ivPwdSwitch = findViewById<ImageView>(R.id.iv_pwd_switch)
 
-        etPwd = findViewById<EditText>(R.id.et_pwd)
+        etPwd = findViewById(R.id.et_pwd)
 
         ivPwdSwitch.setOnClickListener {
             bPwdSwitch = !bPwdSwitch
